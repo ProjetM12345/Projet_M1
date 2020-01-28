@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>CHAT</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+	<script src="js/utils.js" defer></script>
+	<script src="js/chat.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container">
+		<br/>
+		<h1>CHAT</h1>
+		<hr>
+
+		<br/>
+
+    </header>
+
+    <!-- Errors -->
+    <section id="errors" class="container alert alert-danger d-none">
+    </section>
+
+    <!-- Authentication -->
+    <section id="authentication" class="container">
+		<h2>Authentification</h2>
+
+		<form id ="authentification-send">
+		<div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Login :</span>
+		  </div>
+		  <input type="text" class="form-control" placeholder="Entrer votre login" aria-label="Entrer votre login" aria-describedby="basic-addon1" id="login1">
+		</div>
+
+
+
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Mot de passe :</span>
+		  </div>
+		  <input id="password" type="password" class="form-control" placeholder="Entrer votre mot de passe" aria-label="Entrer votre mot de passe" aria-describedby="basic-addon1">
+		</div>
+		<div class="form-check float-right">
+		  <input type="checkbox" class="form-check-input mt-2" value="">
+		  <label class="form-check-label">Resté connecté</label>
+		</div>
+		<button type="reset" class="btn btn-danger float-right mr-3">Effacer</button>
+		<button id ="login" type="submit" class="btn btn-success float-right mr-3">Se connecter</button>
+		</div>
+		</form>
+
+
+
+    </section>
+
+    <!-- Chat -->
+    <section id="chat" class="container d-none">
+      <form id="message-send">
+		 <br/>
+		 <br/>
+		 <br/>
+		 <div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Canaux :</span>
+
+		<select class="custom-select" id="channels-list">
+		</select>
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Raffraichissement : </span>
+		  </div>
+		 <input type="text" class="form-control" placeholder="Entrer votre login" aria-label="Entrer votre login" aria-describedby="basic-addon1">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">secondes</span>
+		  </div>
+		</div>
+
+		<textarea class="form-control" rows="10" id="chat-room" readonly></textarea>
+		<div class="input-group mb-3">
+		<div class="input-group-prepend">
+		 <span class="input-group-text">Message </span>
+		  </div>
+		 <input id="message" type="text" class="form-control" placeholder="Entrer votre message" aria-label="message" aria-describedby="basic-addon1" autofocus required>
+		 </div>
+		 <button id = "logout" type="button" class="btn btn-secondary mr-3">Se déconnecter</button>
+		<button type="submit" class="btn btn-success float-right mr-3">Envoyer</button>
+		 </form>
+    </section>
+  </body>
+</html>
